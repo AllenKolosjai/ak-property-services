@@ -14,16 +14,16 @@
 </head>
 <body class="bg-zinc-50 text-zinc-800">
 
-    <!-- Navbar (same as main site) -->
+    <!-- Navbar -->
     <nav class="bg-white shadow-sm border-b sticky top-0 z-50">
         <div class="tail-container px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-3xl">🧼</div>
                 <div>
                     <span class="font-bold text-2xl tracking-tight">AK Property Services</span>
                     <span class="text-emerald-600 font-medium text-sm block -mt-1">Contractor Cleaning • Hamilton, ON</span>
                 </div>
-            </div>
+            </a>
             <div class="flex items-center gap-8 text-sm font-medium">
                 <div class="relative">
                     <button id="services-btn" class="hover:text-emerald-600 transition flex items-center gap-1">
@@ -44,7 +44,7 @@
                     </button>
                     <div id="book-dropdown" class="hidden absolute right-0 mt-3 w-64 bg-white rounded-3xl shadow-xl py-2 border border-zinc-100 z-50">
                         <a href="index.html#pricing" class="block px-6 py-3 hover:bg-zinc-50 text-sm font-medium">Book a Residential Cleaning</a>
-                        <a href="commercial.html" class="block px-6 py-3 bg-emerald-50 text-emerald-700 font-medium">Book a Commercial Cleaning</a>
+                        <a href="commercial.html#quote" class="block px-6 py-3 bg-emerald-50 text-emerald-700 font-medium">Book a Commercial Cleaning</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,6 @@
     </div>
 
     <div class="tail-container px-6 py-16">
-        <!-- Services -->
         <section class="mb-20">
             <h2 class="text-4xl font-bold text-center mb-4">Commercial Cleaning Services</h2>
             <p class="text-center text-zinc-600 max-w-3xl mx-auto text-lg mb-12">
@@ -97,7 +96,6 @@
             </div>
         </section>
 
-        <!-- Booking Form -->
         <section id="quote">
             <h2 class="text-4xl font-bold text-center mb-4">Request a Booking / Free Quote</h2>
             <p class="text-center text-zinc-600 max-w-xl mx-auto mb-12">
@@ -181,7 +179,6 @@
         </section>
     </div>
 
-    <!-- Footer (same as main site) -->
     <footer class="bg-zinc-900 text-white py-12 border-t border-zinc-800">
         <div class="tail-container px-6 text-center text-sm">
             <p class="mb-2">AK Property Services • Hamilton, Ontario</p>
@@ -191,7 +188,6 @@
     </footer>
 
     <script>
-        // Clickable dropdowns (same as main site)
         window.onload = function() {
             const servicesBtn = document.getElementById('services-btn');
             const servicesDrop = document.getElementById('services-dropdown');
