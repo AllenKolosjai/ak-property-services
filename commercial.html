@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Commercial Cleaning | AK Property Services - Hamilton, ON</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .tail-container { max-width: 1280px; margin: 0 auto; }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+
+    <!-- Navbar (same as main site) -->
+    <nav class="bg-white shadow-sm border-b sticky top-0 z-50">
+        <div class="tail-container px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-3xl">🧼</div>
+                <div>
+                    <span class="font-bold text-2xl tracking-tight">AK Property Services</span>
+                    <span class="text-emerald-600 font-medium text-sm block -mt-1">Contractor Cleaning • Hamilton, ON</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-8 text-sm font-medium">
+                <div class="relative">
+                    <button id="services-btn" class="hover:text-emerald-600 transition flex items-center gap-1">
+                        Services
+                        <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div id="services-dropdown" class="hidden absolute left-0 mt-3 w-56 bg-white rounded-3xl shadow-xl py-2 border border-zinc-100 z-50">
+                        <a href="index.html#residential" class="block px-6 py-3 hover:bg-zinc-50 text-sm font-medium">Residential Cleaning</a>
+                        <a href="index.html#commercial" class="block px-6 py-3 hover:bg-zinc-50 text-sm font-medium">Commercial Cleaning</a>
+                    </div>
+                </div>
+                <a href="index.html#about" class="hover:text-emerald-600 transition">About</a>
+                <a href="index.html#contact" class="hover:text-emerald-600 transition">Contact</a>
+                <div class="relative">
+                    <button id="book-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-2xl font-semibold text-sm transition flex items-center gap-1">
+                        BOOK NOW
+                        <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div id="book-dropdown" class="hidden absolute right-0 mt-3 w-64 bg-white rounded-3xl shadow-xl py-2 border border-zinc-100 z-50">
+                        <a href="index.html#pricing" class="block px-6 py-3 hover:bg-zinc-50 text-sm font-medium">Book a Residential Cleaning</a>
+                        <a href="commercial.html" class="block px-6 py-3 bg-emerald-50 text-emerald-700 font-medium">Book a Commercial Cleaning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Commercial Hero -->
+    <div class="bg-gradient-to-br from-emerald-700 to-teal-700 text-white py-20">
+        <div class="tail-container px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-3xl text-sm mb-6">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Hamilton &amp; surrounding areas • Professional &amp; Insured</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mb-6">
+                Professional Commercial Cleaning
+            </h1>
+            <p class="text-xl text-emerald-100 max-w-2xl mx-auto">
+                Offices • Retail • Medical • Janitorial • Post-Construction<br>
+                Eco-friendly • Flexible scheduling • Local Hamilton team
+            </p>
+            <a href="#quote" class="mt-10 inline-block bg-white text-emerald-700 hover:bg-emerald-50 px-10 py-4 rounded-3xl font-semibold text-lg transition">
+                Get Your Free Quote Today
+            </a>
+        </div>
+    </div>
+
+    <div class="tail-container px-6 py-16">
+        <!-- Services -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-bold text-center mb-4">Commercial Cleaning Services</h2>
+            <p class="text-center text-zinc-600 max-w-3xl mx-auto text-lg mb-12">
+                Reliable, high-quality commercial cleaning solutions tailored to businesses in Hamilton and the surrounding areas.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-zinc-100 p-8 rounded-3xl service-card">
+                    <h3 class="text-2xl font-semibold mb-4 text-emerald-700">Janitorial Services</h3>
+                    <p class="text-zinc-600">Daily, weekly, or customized janitorial maintenance to keep your facility clean, sanitary, and professional. Includes trash removal, restroom sanitization, dusting, floor care, surface wiping, and more.</p>
+                </div>
+
+                <div class="bg-white border border-zinc-100 p-8 rounded-3xl service-card">
+                    <h3 class="text-2xl font-semibold mb-4 text-emerald-700">Post-Construction Services</h3>
+                    <p class="text-zinc-600">Thorough post-construction/final clean-up after renovations or builds. We remove dust, debris, stickers, and polish all surfaces so your space is move-in ready.</p>
+                </div>
+
+                <div class="bg-white border border-zinc-100 p-8 rounded-3xl service-card">
+                    <h3 class="text-2xl font-semibold mb-4 text-emerald-700">Office Cleaning</h3>
+                    <p class="text-zinc-600">Specialized cleaning for professional offices. Vacuuming, desk sanitization, kitchen areas, glass cleaning, trash/recycling, and high-touch disinfection with flexible scheduling.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form -->
+        <section id="quote">
+            <h2 class="text-4xl font-bold text-center mb-4">Request a Booking / Free Quote</h2>
+            <p class="text-center text-zinc-600 max-w-xl mx-auto mb-12">
+                Fill out the form below and our team will respond within 24 hours with availability and a free quote.
+            </p>
+
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-10">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Full Name *</label>
+                        <input type="text" name="name" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Company / Business Name *</label>
+                        <input type="text" name="company" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Email Address *</label>
+                        <input type="email" name="email" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Phone Number *</label>
+                        <input type="tel" name="phone" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-zinc-600 mb-1.5">Property Address in Hamilton Area *</label>
+                    <input type="text" name="address" required placeholder="Street, Hamilton, ON" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Service Interested In *</label>
+                        <select name="service" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
+                            <option value="">-- Select Service --</option>
+                            <option value="janitorial">Janitorial Services</option>
+                            <option value="post-construction">Post-Construction Services</option>
+                            <option value="office">Office Cleaning</option>
+                            <option value="other">Other / Combination</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Frequency / Schedule *</label>
+                        <select name="frequency" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
+                            <option value="">-- Select --</option>
+                            <option value="one-time">One-Time / Project</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="bi-weekly">Bi-Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="daily">Daily</option>
+                            <option value="custom">Custom Schedule</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-zinc-600 mb-1.5">Approximate Property Size (sq ft) or Description</label>
+                    <input type="text" name="size" placeholder="e.g., 5,000 sq ft office, 3 floors..." class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-zinc-600 mb-1.5">Preferred Start Date / Timeframe</label>
+                    <input type="text" name="date" placeholder="e.g., As soon as possible, Next week..." class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-zinc-600 mb-1.5">Additional Details / Special Requests</label>
+                    <textarea name="message" rows="5" placeholder="e.g., Number of restrooms, specific areas..." class="w-full border border-zinc-300 focus:border-emerald-600 rounded-3xl px-5 py-4 outline-none resize-y"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 rounded-2xl text-lg mt-8 transition">
+                    Submit Booking Request
+                </button>
+
+                <p class="text-xs text-zinc-500 text-center mt-6">* Required fields. We respect your privacy.</p>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer (same as main site) -->
+    <footer class="bg-zinc-900 text-white py-12 border-t border-zinc-800">
+        <div class="tail-container px-6 text-center text-sm">
+            <p class="mb-2">AK Property Services • Hamilton, Ontario</p>
+            <p class="text-zinc-500">Locally owned &amp; operated • (289) 689-0720 • akpropertyservicesinc@gmail.com</p>
+            <p class="text-[10px] text-zinc-600 mt-8">© 2026 AK Property Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Clickable dropdowns (same as main site)
+        window.onload = function() {
+            const servicesBtn = document.getElementById('services-btn');
+            const servicesDrop = document.getElementById('services-dropdown');
+            const bookBtn = document.getElementById('book-btn');
+            const bookDrop = document.getElementById('book-dropdown');
+
+            servicesBtn.addEventListener('click', function(e) {
+                e.stopImmediatePropagation();
+                servicesDrop.classList.toggle('hidden');
+                bookDrop.classList.add('hidden');
+            });
+
+            bookBtn.addEventListener('click', function(e) {
+                e.stopImmediatePropagation();
+                bookDrop.classList.toggle('hidden');
+                servicesDrop.classList.add('hidden');
+            });
+
+            document.addEventListener('click', function() {
+                servicesDrop.classList.add('hidden');
+                bookDrop.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

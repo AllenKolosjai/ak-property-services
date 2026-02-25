@@ -27,14 +27,28 @@
                 </div>
             </div>
             <div class="flex items-center gap-8 text-sm font-medium">
-                <a href="#services" class="hover:text-emerald-600 transition">Services</a>
-                <a href="#pricing" class="hover:text-emerald-600 transition">Pricing & Book</a>
+                <div class="relative">
+                    <button id="services-btn" class="hover:text-emerald-600 transition flex items-center gap-1">
+                        Services
+                        <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div id="services-dropdown" class="hidden absolute left-0 mt-3 w-56 bg-white rounded-3xl shadow-xl py-2 border border-zinc-100 z-50">
+                        <a href="#residential" class="block px-6 py-3 hover:bg-zinc-50 text-sm font-medium">Residential Cleaning</a>
+                        <a href="#commercial" class="block px-6 py-3 hover:bg-zinc-50 text-sm font-medium">Commercial Cleaning</a>
+                    </div>
+                </div>
                 <a href="#about" class="hover:text-emerald-600 transition">About</a>
                 <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
-                <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" 
-                        class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-2xl font-semibold text-sm transition">
-                    BOOK NOW
-                </button>
+                <div class="relative">
+                    <button id="book-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-2xl font-semibold text-sm transition flex items-center gap-1">
+                        BOOK NOW
+                        <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+                    </button>
+                    <div id="book-dropdown" class="hidden absolute right-0 mt-3 w-64 bg-white rounded-3xl shadow-xl py-2 border border-zinc-100 z-50">
+                        <a href="#pricing" class="block px-6 py-3 hover:bg-zinc-50 text-sm font-medium">Book a Residential Cleaning</a>
+                        <a href="#commercial" class="block px-6 py-3 hover:bg-zinc-50 text-sm font-medium">Book a Commercial Cleaning</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -48,7 +62,7 @@
                     <span>Hamilton &amp; surrounding areas • Locally owned</span>
                 </div>
                 <h1 class="text-5xl md:text-6xl font-bold leading-none tracking-tighter mb-6">
-                    Book Your<br>Professional<br>Cleaning Today
+                    Spotless Homes &amp;<br>Professional Spaces<br>in Hamilton
                 </h1>
                 <p class="text-xl text-emerald-100 max-w-lg">
                     Eco-friendly residential &amp; commercial cleaning. 
@@ -89,7 +103,7 @@
             </div>
 
             <!-- RESIDENTIAL CLEANING -->
-            <div class="max-w-5xl mx-auto mb-24">
+            <div id="residential" class="max-w-5xl mx-auto mb-24">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="text-6xl">🏠</div>
                     <div>
@@ -200,10 +214,10 @@
                             <h6 class="font-semibold mb-1">Interior Window Cleaning</h6>
                             <p class="text-sm text-zinc-600">All accessible windows</p>
                         </div>
-                        <div class="bg-white border border-zinc-100 p-6 rounded-3xl service-card opacity-75">
-                            <i class="fa-solid fa-window-maximize text-3xl text-amber-500 mb-4"></i>
-                            <h6 class="font-semibold mb-1 line-through">Outside Window Cleaning</h6>
-                            <p class="text-sm text-amber-600">Coming soon</p>
+                        <div class="bg-white border border-zinc-100 p-6 rounded-3xl service-card">
+                            <i class="fa-solid fa-shirt text-3xl text-emerald-600 mb-4"></i>
+                            <h6 class="font-semibold mb-1">Laundry</h6>
+                            <p class="text-sm text-zinc-600">Wash, dry &amp; fold</p>
                         </div>
                         <div class="bg-white border border-zinc-100 p-6 rounded-3xl service-card">
                             <i class="fa-solid fa-door-open text-3xl text-emerald-600 mb-4"></i>
@@ -247,7 +261,7 @@
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-zinc-600 mb-1.5">Phone</label>
-                                            <input id="phone" type="tel" required placeholder="(289) 555-1234" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                                            <input id="phone" type="tel" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
                                         </div>
                                         <div class="col-span-2">
                                             <label class="block text-sm font-medium text-zinc-600 mb-1.5">Email</label>
@@ -255,7 +269,7 @@
                                         </div>
                                         <div class="col-span-2">
                                             <label class="block text-sm font-medium text-zinc-600 mb-1.5">Street Address (Hamilton area)</label>
-                                            <input id="address" type="text" required placeholder="123 Main St, Hamilton, ON L8P 1A1" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                                            <input id="address" type="text" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
                                         </div>
                                     </div>
                                 </div>
@@ -269,45 +283,65 @@
                                         <div>
                                             <label class="block text-sm font-medium text-zinc-600 mb-1.5">Living Rooms</label>
                                             <select id="living" onchange="calculatePrice()" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
-                                                <option value="0">0</option>
-                                                <option value="1" selected>1</option>
+                                                <option value="0" selected>0</option>
+                                                <option value="1">1</option>
                                                 <option value="2">2</option>
                                             </select>
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-zinc-600 mb-1.5">Kitchens</label>
                                             <select id="kitchens" onchange="calculatePrice()" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
-                                                <option value="0">0</option>
-                                                <option value="1" selected>1</option>
+                                                <option value="0" selected>0</option>
+                                                <option value="1">1</option>
                                                 <option value="2">2</option>
                                             </select>
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-zinc-600 mb-1.5">Bedrooms (up to 6)</label>
+                                            <label class="block text-sm font-medium text-zinc-600 mb-1.5">Bedrooms</label>
                                             <select id="bedrooms" onchange="calculatePrice()" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
-                                                <option value="0">0</option><option value="1">1</option><option value="2" selected>2</option>
-                                                <option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                                                <option value="0" selected>0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
                                             </select>
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-zinc-600 mb-1.5">Full Bathrooms (up to 6)</label>
+                                            <label class="block text-sm font-medium text-zinc-600 mb-1.5">Full Bathrooms</label>
                                             <select id="fullbaths" onchange="calculatePrice()" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
-                                                <option value="0">0</option><option value="1" selected>1</option><option value="2">2</option>
-                                                <option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                                                <option value="0" selected>0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
                                             </select>
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-zinc-600 mb-1.5">Powder Rooms (up to 6)</label>
+                                            <label class="block text-sm font-medium text-zinc-600 mb-1.5">Powder Rooms</label>
                                             <select id="powders" onchange="calculatePrice()" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
-                                                <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option>
-                                                <option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                                                <option value="0" selected>0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
                                             </select>
                                         </div>
                                         <div>
-                                            <label class="block text-sm font-medium text-zinc-600 mb-1.5">Extra Rooms (up to 6)</label>
+                                            <label class="block text-sm font-medium text-zinc-600 mb-1.5">Extra Rooms</label>
                                             <select id="extras" onchange="calculatePrice()" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
-                                                <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option>
-                                                <option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                                                <option value="0" selected>0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
                                             </select>
                                         </div>
                                     </div>
@@ -391,8 +425,8 @@
                 </div>
             </div>
 
-            <!-- COMMERCIAL CLEANING (unchanged) -->
-            <div class="max-w-5xl mx-auto border-t border-zinc-100 pt-20">
+            <!-- COMMERCIAL CLEANING -->
+            <div id="commercial" class="max-w-5xl mx-auto border-t border-zinc-100 pt-20">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="text-6xl">🏢</div>
                     <div>
@@ -528,7 +562,7 @@
         const PRICES = {
             living: 35, kitchen: 45, bedroom: 28, fullbath: 38,
             powder: 20, extra: 25, garbage: 10, fridge: 28,
-            oven: 32, windows: 35
+            oven: 32, windows: 35, laundry: 25
         }
 
         function calculatePrice() {
@@ -548,6 +582,7 @@
             if (document.getElementById('chk-fridge') && document.getElementById('chk-fridge').checked) addonsTotal += PRICES.fridge
             if (document.getElementById('chk-oven') && document.getElementById('chk-oven').checked) addonsTotal += PRICES.oven
             if (document.getElementById('chk-windows') && document.getElementById('chk-windows').checked) addonsTotal += PRICES.windows
+            if (document.getElementById('chk-laundry') && document.getElementById('chk-laundry').checked) addonsTotal += PRICES.laundry
 
             const subtotal = roomTotal + addonsTotal
             const freq = document.getElementById('frequency').value
@@ -591,10 +626,10 @@
                     <div class="flex-1"><div class="font-medium">Interior window cleaning</div><div class="text-xs text-zinc-500">All accessible interior windows</div></div>
                     <div class="text-emerald-600 font-medium text-right">+$35</div>
                 </label>
-                <label class="flex items-start gap-3 p-4 border border-zinc-200 hover:border-emerald-200 rounded-3xl cursor-pointer transition opacity-75">
-                    <input type="checkbox" disabled class="mt-1 accent-emerald-600">
-                    <div class="flex-1"><div class="font-medium line-through">Outside window cleaning</div><div class="text-xs text-amber-600">Coming soon</div></div>
-                    <div class="text-emerald-600 font-medium text-right line-through">+$50</div>
+                <label class="flex items-start gap-3 p-4 border border-zinc-200 hover:border-emerald-200 rounded-3xl cursor-pointer transition">
+                    <input type="checkbox" id="chk-laundry" onchange="calculatePrice()" class="mt-1 accent-emerald-600">
+                    <div class="flex-1"><div class="font-medium">Laundry</div><div class="text-xs text-zinc-500">Wash, dry &amp; fold</div></div>
+                    <div class="text-emerald-600 font-medium text-right">+$25</div>
                 </label>
             `
             document.getElementById('addons-list').innerHTML = html
@@ -638,6 +673,30 @@
             })
             
             initSmoothScroll()
+
+            // Clickable dropdowns
+            const servicesBtn = document.getElementById('services-btn')
+            const servicesDrop = document.getElementById('services-dropdown')
+            const bookBtn = document.getElementById('book-btn')
+            const bookDrop = document.getElementById('book-dropdown')
+
+            servicesBtn.addEventListener('click', function(e) {
+                e.stopImmediatePropagation()
+                servicesDrop.classList.toggle('hidden')
+                bookDrop.classList.add('hidden')
+            })
+
+            bookBtn.addEventListener('click', function(e) {
+                e.stopImmediatePropagation()
+                bookDrop.classList.toggle('hidden')
+                servicesDrop.classList.add('hidden')
+            })
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function() {
+                servicesDrop.classList.add('hidden')
+                bookDrop.classList.add('hidden')
+            })
         }
     </script>
 </body>
