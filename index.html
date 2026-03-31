@@ -629,46 +629,6 @@
             document.getElementById('addons-list').innerHTML = html
         }
 
-        function handleSubmit(e) {
-    e.preventDefault();
-
-    if (!document.getElementById('name').value.trim()) {
-        alert("Please enter your name");
-        return;
-    }
-
-    const form = document.getElementById('main-form');
-    const formData = new FormData(form);
-
-    fetch('https://formsubmit.co/akpropertyservicesinc@gmail.com', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            document.getElementById('success-modal').classList.remove('hidden');
-            document.getElementById('success-modal').classList.add('flex');
-            form.reset();
-            calculatePrice(); // reset price display too
-        } else {
-            alert("Sorry, something went wrong. Please try again or call us directly.");
-        }
-    })
-    .catch(error => {
-        alert("Network error. Please try again or call (365)-384-7909.");
-    });
-
-        }
-
-        function closeModal() {
-            const m = document.getElementById('success-modal')
-            m.classList.add('hidden')
-            m.classList.remove('flex')
-        }
-
         function initSmoothScroll() {
             document.querySelectorAll('a[href^="#"]').forEach(link => {
                 link.addEventListener('click', function(e) {
