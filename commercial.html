@@ -81,9 +81,18 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white border border-zinc-100 p-8 rounded-3xl service-card">
                     <h3 class="text-2xl font-semibold mb-4 text-emerald-700">Janitorial Services</h3>
-                    <p class="text-zinc-600">Daily, weekly, or customized janitorial maintenance...</p>
+                    <p class="text-zinc-600">Daily, weekly, or customized janitorial maintenance to keep your facility clean, sanitary, and professional. Includes trash removal, restroom sanitization, dusting, floor care, surface wiping, and more.</p>
                 </div>
-                <!-- Other service cards remain the same -->
+
+                <div class="bg-white border border-zinc-100 p-8 rounded-3xl service-card">
+                    <h3 class="text-2xl font-semibold mb-4 text-emerald-700">Post-Construction Services</h3>
+                    <p class="text-zinc-600">Thorough post-construction/final clean-up after renovations or builds. We remove dust, debris, stickers, and polish all surfaces so your space is move-in ready.</p>
+                </div>
+
+                <div class="bg-white border border-zinc-100 p-8 rounded-3xl service-card">
+                    <h3 class="text-2xl font-semibold mb-4 text-emerald-700">Office Cleaning</h3>
+                    <p class="text-zinc-600">Specialized cleaning for professional offices. Vacuuming, desk sanitization, kitchen areas, glass cleaning, trash/recycling, and high-touch disinfection with flexible scheduling.</p>
+                </div>
             </div>
         </section>
 
@@ -98,7 +107,6 @@
                 <input type="hidden" name="_autoresponse" value="Thank you for your commercial cleaning request! We'll contact you within 24 hours. - AK Property Services">
                 <input type="text" name="_gotcha" style="display:none">
 
-                <!-- All form fields with proper name attributes -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-zinc-600 mb-1.5">Full Name *</label>
@@ -110,8 +118,61 @@
                     </div>
                 </div>
 
-                <!-- Rest of the form fields with name attributes added -->
-                <!-- (Same as my previous commercial.html response) -->
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Email Address *</label>
+                        <input type="email" name="email" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Phone Number *</label>
+                        <input type="tel" name="phone" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-zinc-600 mb-1.5">Property Address in Hamilton Area *</label>
+                    <input type="text" name="address" required placeholder="Street, Hamilton, ON" class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Service Interested In *</label>
+                        <select name="service" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
+                            <option value="">-- Select Service --</option>
+                            <option value="janitorial">Janitorial Services</option>
+                            <option value="post-construction">Post-Construction Services</option>
+                            <option value="office">Office Cleaning</option>
+                            <option value="other">Other / Combination</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-zinc-600 mb-1.5">Frequency / Schedule *</label>
+                        <select name="frequency" required class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none bg-white">
+                            <option value="">-- Select --</option>
+                            <option value="one-time">One-Time / Project</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="bi-weekly">Bi-Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="daily">Daily</option>
+                            <option value="custom">Custom Schedule</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-zinc-600 mb-1.5">Approximate Property Size (sq ft) or Description</label>
+                    <input type="text" name="size" placeholder="e.g., 5,000 sq ft office, 3 floors..." class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-zinc-600 mb-1.5">Preferred Start Date / Timeframe</label>
+                    <input type="text" name="preferred_date" placeholder="e.g., As soon as possible, Next week..." class="w-full border border-zinc-300 focus:border-emerald-600 rounded-2xl px-5 py-3 outline-none">
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-zinc-600 mb-1.5">Additional Details / Special Requests</label>
+                    <textarea name="message" rows="5" placeholder="e.g., Number of restrooms, specific areas..." class="w-full border border-zinc-300 focus:border-emerald-600 rounded-3xl px-5 py-4 outline-none resize-y"></textarea>
+                </div>
 
                 <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 rounded-2xl text-lg mt-8 transition">
                     Submit Booking Request
@@ -153,7 +214,7 @@
                 servicesDrop.classList.add('hidden');
                 bookDrop.classList.add('hidden');
             });
-        };
+        }
     </script>
 </body>
 </html>
